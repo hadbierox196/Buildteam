@@ -1,0 +1,316 @@
+/* General styles */
+body {
+  margin: 0;
+  background-color: #000;
+  color: #ffeb3b;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  padding: 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Circle Section */
+.circle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.circle-container {
+  width: 250px;
+  height: 250px;
+  border: 10px solid #ffeb3b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px #ffeb3b;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.circle-container:active {
+  transform: scale(0.95);
+}
+
+.money {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Transfer Market Section */
+.market-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Search Toggle Styles */
+.search-toggle-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffeb3b;
+  color: #000;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #ffc107;
+}
+
+button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Search Bar Styles */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ffeb3b;
+  border-radius: 25px;
+  font-size: 1rem;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #fff;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="number"] {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Player List */
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.player-card {
+  background-color: #000;
+  border: 2px solid #ffeb3b;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: grab;
+  width: 120px;
+  height: 150px;
+  font-size: 0.9rem;
+  margin: 5px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease; /* Smooth transition for card movements */
+}
+
+.player-card .player-role {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ffeb3b;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #ffeb3b;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .player-card {
+    width: 120px;
+    height: 150px;
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .player-card .player-role {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Bought Players Section */
+#bought-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.bought-player {
+  margin: 10px 0;
+  color: #ffeb3b;
+}
+
+.bought-list h2 {
+  color: #ffeb3b;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  #bought-list {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .bought-player {
+    font-size: 1rem;
+  }
+
+  .bought-list h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Pitch Section - Full Screen */
+.pitch-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #000;
+  color: #ffeb3b;
+}
+
+.pitch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  border: 2px dashed #ffeb3b;
+  background-color: #222;
+  position: relative;
+  flex-shrink: 0; /* Prevent shrinking */
+  overflow: hidden; /* Hide overflow when moving cards */
+  transition: transform 0.2s ease; /* Smooth pitch movements */
+}
+
+.player-card {
+  background-color: #000;
+  border: 2px solid #ffeb3b;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: grab;
+  text-align: center;
+  width: 120px; /* Fixed width on pitch */
+  height: 150px; /* Fixed height on pitch */
+  font-size: 0.9rem;
+  margin: 5px;
+  flex-shrink: 0; /* Prevent shrinking */
+  transition: transform 0.2s ease; /* Smooth transition for card placements */
+}
+
+.proceed-button,
+.restart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffeb3b;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .proceed-button,
+  .restart-button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
