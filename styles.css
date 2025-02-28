@@ -168,8 +168,8 @@ input[type="number"]::placeholder {
   border-radius: 5px;
   text-align: center;
   cursor: grab;
-  width: 20px;
-  height: 50px;
+  width: 05px;
+  height: 20px;
   font-size: 0.9rem;
   margin: 5px;
   flex-shrink: 0;
