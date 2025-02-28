@@ -46,7 +46,7 @@ body {
 }
 
 .money {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #ffeb3b;
 }
@@ -170,7 +170,7 @@ input[type="number"]::placeholder {
   cursor: grab;
   width: 05px;
   height: 20px;
-  font-size: 0.9rem;
+  font-size: 0.4rem;
   margin: 5px;
   flex-shrink: 0;
   display: flex;
